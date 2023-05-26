@@ -9,10 +9,11 @@ import Footer from "./component/Footer";
 import ListGroup from "./component/ListGroup";
 import NavBar from "./component/NavBar";
 import FavColor from "./component/FavColor";
+import Alert from "./component/Alert";
 function App() {
   return (
     <div>
-      <ListGroup />
+      <Alert text="hello"></Alert>
     </div>
   );
 }
