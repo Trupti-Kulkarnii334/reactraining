@@ -12,7 +12,7 @@ import FavColor from "./component/FavColor";
 function App() {
   return (
     <div>
-      <FavColor />
+      <ListGroup />
     </div>
   );
 }
