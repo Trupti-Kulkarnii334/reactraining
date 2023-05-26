@@ -8,10 +8,11 @@ import Content from "./component/Content";
 import Footer from "./component/Footer";
 import ListGroup from "./component/ListGroup";
 import NavBar from "./component/NavBar";
+import FavColor from "./component/FavColor";
 function App() {
   return (
     <div>
-      <Menu />
+      <FavColor />
     </div>
   );
 }
