@@ -6,14 +6,12 @@ import Header from "./component/Header";
 import Menu from "./component/Menu";
 import Content from "./component/Content";
 import Footer from "./component/Footer";
-
+import ListGroup from "./component/ListGroup";
+import NavBar from "./component/NavBar";
 function App() {
   return (
     <div>
-      <Header />
       <Menu />
-      <Content />
-      <Footer />
     </div>
   );
 }
