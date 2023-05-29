@@ -1,27 +1,32 @@
 import { MouseEvent, useState } from "react";
-
-function ListGroup() {
-  let places = ["Kolkata", "Delhi", "Mumbai", "Bangalore", "Chennai"];
-  const [place, setPlace] = useState(-1);
-  const handlingClick = (event: MouseEvent) => console.log(event);
+interface Props {
+  heading: string;
+  items: string[];
+  onSelectItem: (item: string) => void;
+}
+function ListGroup({ heading, items, onSelectItem }: Props) {
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+  //let items = ["Kolkata", "Delhi", "Mumbai", "Bangalore", "Chennai"];
+  const handleClick = (event: MouseEvent) => console.log(event);
   //items = [];
   return (
     <>
       <h1>Dynamic List</h1>
-      {places.length === 0 && <p>No Places is found</p>}
+      {items.length === 0 && <p>No Items is found in the list</p>}
       <ul className="list-group">
-        {places.map((x, index) => (
+        {items.map((x, index) => (
           <li
             className={
-              place === index ? "list-group-item active" : "list-group-item"
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
             }
             key={index}
-            onClick={() => setPlace(index)}
+            onClick={() => onSelectItem(x)}
           >
-            {x}​​​​​​
+            {x}
           </li>
         ))}
-        ​​​​​​
       </ul>
     </>
   );

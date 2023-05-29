@@ -10,10 +10,13 @@ import ListGroup from "./component/ListGroup";
 import NavBar from "./component/NavBar";
 import FavColor from "./component/FavColor";
 import Alert from "./component/Alert";
+import Button from "./component/Button";
+import Afterlogin from "./AfterLogin";
+
 function App() {
   return (
     <div>
-      <Alert text="hello"></Alert>
+      <Afterlogin></Afterlogin>
     </div>
   );
 }
